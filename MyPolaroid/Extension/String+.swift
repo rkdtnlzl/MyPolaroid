@@ -12,7 +12,9 @@ extension String {
         let specialLiterals = CharacterSet(charactersIn: "@#$%")
         let numbers = CharacterSet.decimalDigits
         
-        if self.count < 2 || self.count > 9 {
+        if self.isEmpty {
+            return .empty
+        } else if self.count < 2 || self.count > 9 {
             return .invalidLength
         } else if self.rangeOfCharacter(from: specialLiterals) != nil {
             return .containsSpecialCharacters

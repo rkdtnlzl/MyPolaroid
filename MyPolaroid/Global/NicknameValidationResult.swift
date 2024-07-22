@@ -12,6 +12,7 @@ enum NicknameValidationResult {
     case invalidLength
     case containsSpecialCharacters
     case containsNumbers
+    case empty
     
     var message: String {
         switch self {
@@ -23,6 +24,8 @@ enum NicknameValidationResult {
             return StringLiterals.LabelText.NickNameStatus.specialLiteralsCase
         case .containsNumbers:
             return StringLiterals.LabelText.NickNameStatus.numberOfLiteralsCase
+        case .empty:
+            return ""
         }
     }
     
@@ -35,3 +38,4 @@ enum NicknameValidationResult {
         }
     }
 }
+
