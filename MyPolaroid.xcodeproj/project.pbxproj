@@ -25,6 +25,7 @@
 		0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD382C4E5FBA00C17313 /* MBTIView.swift */; };
 		0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6A2C4FC41700C17313 /* Observable.swift */; };
 		0168FD6D2C4FC6AB00C17313 /* NicknameSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6C2C4FC6AB00C17313 /* NicknameSettingViewModel.swift */; };
+		0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6E2C4FDABA00C17313 /* UIView+.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		0168FD382C4E5FBA00C17313 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
 		0168FD6A2C4FC41700C17313 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		0168FD6C2C4FC6AB00C17313 /* NicknameSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewModel.swift; sourceTree = "<group>"; };
+		0168FD6E2C4FDABA00C17313 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				0168FD142C4E3EC400C17313 /* String+.swift */,
 				0168FD1C2C4E3F8700C17313 /* UIColor+HexCode.swift */,
 				0168FD262C4E450A00C17313 /* UICollectionViewCell+.swift */,
+				0168FD6E2C4FDABA00C17313 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				0168FD2A2C4E4FBA00C17313 /* TabBarViewController.swift in Sources */,
 				0168FD152C4E3EC400C17313 /* String+.swift in Sources */,
 				01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */,
+				0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */,
 				0168FD192C4E3F1900C17313 /* StringLiterals.swift in Sources */,
 				0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */,
 				0168FD252C4E447500C17313 /* ProfileImageSettingViewController.swift in Sources */,
