@@ -23,7 +23,7 @@ enum StringLiterals {
     
     enum ButtonTitle {
         static let launch = "시작하기"
-        static let finish = "완료"
+        static let finish = "완료하기"
         static let allDelete = "전체 삭제"
         static let sortAccuracy = "정확도순"
         static let sortDate = "날짜순"
