@@ -181,7 +181,6 @@
 				01FF385D2C4E2EE6004F5F3A /* LaunchScreen.storyboard */,
 				01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */,
 				0168FD202C4E400400C17313 /* Extension */,
-				01FF38602C4E2EE6004F5F3A /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +217,7 @@
 			children = (
 				0168FD702C5000EB00C17313 /* Resources */,
 				0168FD712C5000F900C17313 /* Sources */,
+				01FF38602C4E2EE6004F5F3A /* Info.plist */,
 			);
 			path = MyPolaroid;
 			sourceTree = "<group>";
