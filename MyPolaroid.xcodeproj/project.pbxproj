@@ -22,6 +22,7 @@
 		0168FD312C4E507600C17313 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD302C4E507600C17313 /* SearchViewController.swift */; };
 		0168FD332C4E508B00C17313 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD322C4E508B00C17313 /* FavoriteViewController.swift */; };
 		0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD362C4E5EAA00C17313 /* BaseView.swift */; };
+		0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD382C4E5FBA00C17313 /* MBTIView.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		0168FD302C4E507600C17313 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0168FD322C4E508B00C17313 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		0168FD362C4E5EAA00C17313 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0168FD382C4E5FBA00C17313 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				01FF38662C4E2FE3004F5F3A /* OnboardingViewController.swift */,
 				0168FD122C4E3D1600C17313 /* NicknameSettingViewController.swift */,
 				0168FD242C4E447500C17313 /* ProfileImageSettingViewController.swift */,
+				0168FD382C4E5FBA00C17313 /* MBTIView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				0168FD152C4E3EC400C17313 /* String+.swift in Sources */,
 				01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */,
 				0168FD192C4E3F1900C17313 /* StringLiterals.swift in Sources */,
+				0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */,
 				0168FD252C4E447500C17313 /* ProfileImageSettingViewController.swift in Sources */,
 				0168FD2F2C4E506500C17313 /* MainViewController.swift in Sources */,
 				0168FD312C4E507600C17313 /* SearchViewController.swift in Sources */,
