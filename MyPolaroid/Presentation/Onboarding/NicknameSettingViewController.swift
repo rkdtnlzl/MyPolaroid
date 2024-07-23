@@ -156,4 +156,8 @@ final class NicknameSettingViewController: BaseViewController {
             self?.viewModel.inputMBTISelection.value = selectedMBTI
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
