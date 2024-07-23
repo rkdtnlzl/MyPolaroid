@@ -21,10 +21,7 @@ final class OnboardingViewController: BaseViewController {
     }
     
     override func configureHierarchy() {
-        view.addSubview(logoImageView)
-        view.addSubview(polaroidImageView)
-        view.addSubview(nameLabel)
-        view.addSubview(startButton)
+        view.addSubviews(logoImageView, polaroidImageView, nameLabel, startButton)
     }
     
     override func configureUI() {
@@ -41,7 +38,7 @@ final class OnboardingViewController: BaseViewController {
         
         startButton.setTitle("시작하기", for: .normal)
         startButton.setTitleColor(.white, for: .normal)
-        startButton.backgroundColor = .blue
+        startButton.backgroundColor = MPColors.blue
         startButton.layer.cornerRadius = 20
     }
     

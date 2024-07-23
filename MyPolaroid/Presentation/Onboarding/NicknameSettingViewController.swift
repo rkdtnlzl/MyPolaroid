@@ -71,14 +71,7 @@ final class NicknameSettingViewController: BaseViewController {
     }
     
     override func configureHierarchy() {
-        view.addSubview(profileImageView)
-        view.addSubview(profileImageButton)
-        view.addSubview(nicknameTextField)
-        view.addSubview(nicknameTextFieldLine)
-        view.addSubview(nicknameStatusLabel)
-        view.addSubview(completeButton)
-        view.addSubview(mbtiLabel)
-        view.addSubview(mbtiView)
+        view.addSubviews(profileImageView, profileImageButton, nicknameTextField, nicknameTextFieldLine, nicknameStatusLabel, completeButton, mbtiLabel, mbtiView)
     }
     
     override func configureUI() {

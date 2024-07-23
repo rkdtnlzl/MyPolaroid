@@ -21,8 +21,7 @@ final class ProfileImageSettingViewController: BaseViewController, UICollectionV
     }
     
     override func configureHierarchy() {
-        view.addSubview(profileImageView)
-        view.addSubview(collectionView)
+        view.addSubviews(profileImageView, collectionView)
     }
     
     override func configureUI() {
