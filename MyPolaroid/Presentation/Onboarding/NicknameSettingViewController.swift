@@ -16,22 +16,38 @@ final class NicknameSettingViewController: BaseViewController {
     private let nicknameTextFieldLine = UIView()
     private let nicknameStatusLabel = UILabel()
     private let completeButton = UIButton()
+    private let mbtiLabel = UILabel()
+    private let mbtiView = MBTIView()
+    
+    private let viewModel = NicknameSettingViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindViewModel()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         let profileNumber = UserDefaults.standard.integer(forKey: "\(UserDefaultsKey.profileNumberKey)")
-        profileImageView.image = UIImage(named: "profile_\(profileNumber)")
+        viewModel.inputProfileNumber.value = profileNumber
+    }
+    
+    private func bindViewModel() {
+        viewModel.outputProfileImage.bind { [weak self] imageName in
+            self?.profileImageView.image = UIImage(named: imageName ?? StringLiterals.Default.defaultProfileImage)
+        }
+        viewModel.outputNicknameStatus.bind { [weak self] message in
+            self?.nicknameStatusLabel.text = message
+        }
+        viewModel.outputIsCompleteButtonEnabled.bind { [weak self] isEnabled in
+            self?.completeButton.isEnabled = isEnabled
+            self?.completeButton.backgroundColor = isEnabled ? MPColors.blue : MPColors.gray
+        }
     }
     
     @objc func nicknameTextFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
-        
-        let validationResult = text.validateNickname()
-        
-        nicknameStatusLabel.text = validationResult.message
-        completeButton.backgroundColor = validationResult.isValid ? MPColors.blue : MPColors.gray
-        completeButton.isEnabled = validationResult.isValid
+        viewModel.inputNickname.value = text
     }
     
     @objc func profileImageButtonClicked() {
@@ -42,14 +58,7 @@ final class NicknameSettingViewController: BaseViewController {
     }
     
     @objc func completeButtonClicked() {
-        UserDefaults.standard.set(nicknameTextField.text, forKey: "\(UserDefaultsKey.nicknameKey)")
-        UserDefaults.standard.set(true, forKey: "\(UserDefaultsKey.isUserKey)")
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        let currentDate = dateFormatter.string(from: Date())
-        UserDefaults.standard.set(currentDate, forKey: "\(UserDefaultsKey.joinDateKey)")
-        
+        viewModel.saveUserData()
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
         let rootVC = TabBarController()
@@ -68,10 +77,11 @@ final class NicknameSettingViewController: BaseViewController {
         view.addSubview(nicknameTextFieldLine)
         view.addSubview(nicknameStatusLabel)
         view.addSubview(completeButton)
+        view.addSubview(mbtiLabel)
+        view.addSubview(mbtiView)
     }
     
     override func configureUI() {
-        profileImageView.image = UIImage(named: "profile_1")
         profileImageView.contentMode = .scaleAspectFit
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = 50
@@ -88,16 +98,19 @@ final class NicknameSettingViewController: BaseViewController {
         
         nicknameTextFieldLine.backgroundColor = .darkGray
         
-        nicknameStatusLabel.text = ""
-        nicknameStatusLabel.textColor = UIColor.red
+        nicknameStatusLabel.textColor = MPColors.red
         nicknameStatusLabel.font = .systemFont(ofSize: 13)
         
         completeButton.tintColor = .white
         completeButton.backgroundColor = MPColors.gray
-        completeButton.setTitle("완료하기", for: .normal)
+        completeButton.setTitle(StringLiterals.ButtonTitle.finish, for: .normal)
         completeButton.setTitleColor(.white, for: .normal)
         completeButton.layer.cornerRadius = 20
         completeButton.isEnabled = false
+        
+        mbtiLabel.text = StringLiterals.LabelText.MBTITitle
+        mbtiLabel.textColor = .black
+        mbtiLabel.font = .boldSystemFont(ofSize: 17)
     }
     
     override func configureConstraints() {
@@ -128,11 +141,26 @@ final class NicknameSettingViewController: BaseViewController {
             make.bottom.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(30)
             make.height.equalTo(44)
         }
+        mbtiLabel.snp.makeConstraints { make in
+            make.top.equalTo(nicknameStatusLabel.snp.bottom).offset(30)
+            make.leading.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        mbtiView.snp.makeConstraints { make in
+            make.top.equalTo(nicknameStatusLabel.snp.bottom).offset(20)
+            make.leading.equalTo(mbtiLabel.snp.trailing).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.height.equalTo(120)
+        }
     }
     
     override func configureTarget() {
         nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldDidChange), for: .editingChanged)
         profileImageButton.addTarget(self, action: #selector(profileImageButtonClicked), for: .touchUpInside)
         completeButton.addTarget(self, action: #selector(completeButtonClicked), for: .touchUpInside)
+        
+        mbtiView.selectionChanged = { [weak self] in
+            let selectedMBTI = self?.mbtiView.getSelectedMBTI() ?? []
+            self?.viewModel.inputMBTISelection.value = selectedMBTI
+        }
     }
 }
