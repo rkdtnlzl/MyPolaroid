@@ -9,9 +9,9 @@ import Foundation
 
 enum StringLiterals {
     enum LabelText {
-        static let onboardingTitle = "MeaningOut"
         static let nosearchTitle = "최근 검색어가 없어요"
         static let recentSearchTitle = "최근검색"
+        static let MBTITitle = "MBTI"
         
         enum NickNameStatus {
             static let rightCase = "사용할 수 있는 닉네임입니다"
@@ -25,10 +25,6 @@ enum StringLiterals {
         static let launch = "시작하기"
         static let finish = "완료하기"
         static let allDelete = "전체 삭제"
-        static let sortAccuracy = "정확도순"
-        static let sortDate = "날짜순"
-        static let sortPriceHigh = "가격높은순"
-        static let sortPriceLow = "가격낮은순"
     }
     
     enum Placeholder {
@@ -44,5 +40,9 @@ enum StringLiterals {
     enum AlertLabel {
         static let alertTitle = "탈퇴하기"
         static let alertMessage = "탈퇴하면 데이터가 모두 초기화됩니다. 탈퇴하시겠습니까?"
+    }
+    
+    enum Default {
+        static let defaultProfileImage = "profile_0"
     }
 }
