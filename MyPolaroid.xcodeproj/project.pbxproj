@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0168FD112C4E38FB00C17313 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0168FD102C4E38FB00C17313 /* SnapKit */; };
+		0168FD132C4E3D1600C17313 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD122C4E3D1600C17313 /* NicknameSettingViewController.swift */; };
+		0168FD152C4E3EC400C17313 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD142C4E3EC400C17313 /* String+.swift */; };
+		0168FD172C4E3EF000C17313 /* NicknameValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */; };
+		0168FD192C4E3F1900C17313 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD182C4E3F1900C17313 /* StringLiterals.swift */; };
+		0168FD1B2C4E3F6A00C17313 /* MPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD1A2C4E3F6A00C17313 /* MPColors.swift */; };
+		0168FD1D2C4E3F8700C17313 /* UIColor+HexCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD1C2C4E3F8700C17313 /* UIColor+HexCode.swift */; };
+		0168FD232C4E442600C17313 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD222C4E442600C17313 /* UserDefaultsKey.swift */; };
+		0168FD252C4E447500C17313 /* ProfileImageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD242C4E447500C17313 /* ProfileImageSettingViewController.swift */; };
+		0168FD272C4E450A00C17313 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD262C4E450A00C17313 /* UICollectionViewCell+.swift */; };
+		0168FD2A2C4E4FBA00C17313 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD292C4E4FBA00C17313 /* TabBarViewController.swift */; };
+		0168FD2F2C4E506500C17313 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD2E2C4E506500C17313 /* MainViewController.swift */; };
+		0168FD312C4E507600C17313 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD302C4E507600C17313 /* SearchViewController.swift */; };
+		0168FD332C4E508B00C17313 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD322C4E508B00C17313 /* FavoriteViewController.swift */; };
+		0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD362C4E5EAA00C17313 /* BaseView.swift */; };
+		0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD382C4E5FBA00C17313 /* MBTIView.swift */; };
+		0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6A2C4FC41700C17313 /* Observable.swift */; };
+		0168FD6D2C4FC6AB00C17313 /* NicknameSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6C2C4FC6AB00C17313 /* NicknameSettingViewModel.swift */; };
+		0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FD6E2C4FDABA00C17313 /* UIView+.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -17,6 +36,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0168FD122C4E3D1600C17313 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
+		0168FD142C4E3EC400C17313 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameValidationResult.swift; sourceTree = "<group>"; };
+		0168FD182C4E3F1900C17313 /* StringLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLiterals.swift; sourceTree = "<group>"; };
+		0168FD1A2C4E3F6A00C17313 /* MPColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPColors.swift; sourceTree = "<group>"; };
+		0168FD1C2C4E3F8700C17313 /* UIColor+HexCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexCode.swift"; sourceTree = "<group>"; };
+		0168FD222C4E442600C17313 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		0168FD242C4E447500C17313 /* ProfileImageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSettingViewController.swift; sourceTree = "<group>"; };
+		0168FD262C4E450A00C17313 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		0168FD292C4E4FBA00C17313 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		0168FD2E2C4E506500C17313 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0168FD302C4E507600C17313 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0168FD322C4E508B00C17313 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		0168FD362C4E5EAA00C17313 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0168FD382C4E5FBA00C17313 /* MBTIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBTIView.swift; sourceTree = "<group>"; };
+		0168FD6A2C4FC41700C17313 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		0168FD6C2C4FC6AB00C17313 /* NicknameSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewModel.swift; sourceTree = "<group>"; };
+		0168FD6E2C4FDABA00C17313 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +70,118 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0168FD112C4E38FB00C17313 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0168FD1E2C4E3FE300C17313 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				01FF38662C4E2FE3004F5F3A /* OnboardingViewController.swift */,
+				0168FD122C4E3D1600C17313 /* NicknameSettingViewController.swift */,
+				0168FD6C2C4FC6AB00C17313 /* NicknameSettingViewModel.swift */,
+				0168FD242C4E447500C17313 /* ProfileImageSettingViewController.swift */,
+				0168FD382C4E5FBA00C17313 /* MBTIView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0168FD1F2C4E3FF500C17313 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				01FF38682C4E2FF9004F5F3A /* BaseViewController.swift */,
+				0168FD362C4E5EAA00C17313 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0168FD202C4E400400C17313 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD142C4E3EC400C17313 /* String+.swift */,
+				0168FD1C2C4E3F8700C17313 /* UIColor+HexCode.swift */,
+				0168FD262C4E450A00C17313 /* UICollectionViewCell+.swift */,
+				0168FD6E2C4FDABA00C17313 /* UIView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0168FD212C4E404800C17313 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD182C4E3F1900C17313 /* StringLiterals.swift */,
+				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
+				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
+				0168FD222C4E442600C17313 /* UserDefaultsKey.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		0168FD282C4E46C700C17313 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */,
+				01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0168FD2B2C4E500600C17313 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD2E2C4E506500C17313 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0168FD2C2C4E500D00C17313 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD302C4E507600C17313 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0168FD2D2C4E504B00C17313 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD322C4E508B00C17313 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		0168FD342C4E556500C17313 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD292C4E4FBA00C17313 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0168FD352C4E5CE500C17313 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD1F2C4E3FF500C17313 /* Base */,
+				0168FD1E2C4E3FE300C17313 /* Onboarding */,
+				0168FD2D2C4E504B00C17313 /* Favorite */,
+				0168FD2C2C4E500D00C17313 /* Search */,
+				0168FD2B2C4E500600C17313 /* Main */,
+				0168FD342C4E556500C17313 /* TabBar */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0168FD692C4FC40600C17313 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD6A2C4FC41700C17313 /* Observable.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		01FF38462C4E2EE4004F5F3A = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +202,11 @@
 		01FF38512C4E2EE4004F5F3A /* MyPolaroid */ = {
 			isa = PBXGroup;
 			children = (
-				01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */,
-				01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */,
-				01FF38662C4E2FE3004F5F3A /* OnboardingViewController.swift */,
-				01FF38682C4E2FF9004F5F3A /* BaseViewController.swift */,
+				0168FD692C4FC40600C17313 /* Util */,
+				0168FD282C4E46C700C17313 /* Application */,
+				0168FD212C4E404800C17313 /* Global */,
+				0168FD202C4E400400C17313 /* Extension */,
+				0168FD352C4E5CE500C17313 /* Presentation */,
 				01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */,
 				01FF385D2C4E2EE6004F5F3A /* LaunchScreen.storyboard */,
 				01FF38602C4E2EE6004F5F3A /* Info.plist */,
@@ -86,6 +230,9 @@
 			dependencies = (
 			);
 			name = MyPolaroid;
+			packageProductDependencies = (
+				0168FD102C4E38FB00C17313 /* SnapKit */,
+			);
 			productName = MyPolaroid;
 			productReference = 01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 01FF38462C4E2EE4004F5F3A;
+			packageReferences = (
+				0168FD0F2C4E38FB00C17313 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 01FF38502C4E2EE4004F5F3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,8 +293,26 @@
 			files = (
 				01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */,
 				01FF38692C4E2FF9004F5F3A /* BaseViewController.swift in Sources */,
+				0168FD6D2C4FC6AB00C17313 /* NicknameSettingViewModel.swift in Sources */,
+				0168FD132C4E3D1600C17313 /* NicknameSettingViewController.swift in Sources */,
 				01FF38672C4E2FE3004F5F3A /* OnboardingViewController.swift in Sources */,
+				0168FD2A2C4E4FBA00C17313 /* TabBarViewController.swift in Sources */,
+				0168FD152C4E3EC400C17313 /* String+.swift in Sources */,
 				01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */,
+				0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */,
+				0168FD192C4E3F1900C17313 /* StringLiterals.swift in Sources */,
+				0168FD392C4E5FBA00C17313 /* MBTIView.swift in Sources */,
+				0168FD252C4E447500C17313 /* ProfileImageSettingViewController.swift in Sources */,
+				0168FD2F2C4E506500C17313 /* MainViewController.swift in Sources */,
+				0168FD312C4E507600C17313 /* SearchViewController.swift in Sources */,
+				0168FD172C4E3EF000C17313 /* NicknameValidationResult.swift in Sources */,
+				0168FD332C4E508B00C17313 /* FavoriteViewController.swift in Sources */,
+				0168FD272C4E450A00C17313 /* UICollectionViewCell+.swift in Sources */,
+				0168FD1D2C4E3F8700C17313 /* UIColor+HexCode.swift in Sources */,
+				0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */,
+				0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */,
+				0168FD1B2C4E3F6A00C17313 /* MPColors.swift in Sources */,
+				0168FD232C4E442600C17313 /* UserDefaultsKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +535,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0168FD0F2C4E38FB00C17313 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0168FD102C4E38FB00C17313 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0168FD0F2C4E38FB00C17313 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01FF38472C4E2EE4004F5F3A /* Project object */;
 }
