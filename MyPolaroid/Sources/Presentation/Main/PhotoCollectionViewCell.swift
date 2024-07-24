@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 import Kingfisher
 
 class PhotoCollectionViewCell: BaseCollectionViewCell {
     static let id = "PhotoCollectionViewCell"
-    
     let imageView = UIImageView()
     let likesContainer = UIView()
     let likesLabel = UILabel()
-    
     
     override func configureHierarchy() {
         contentView.addSubview(imageView)
@@ -25,10 +24,15 @@ class PhotoCollectionViewCell: BaseCollectionViewCell {
     override func configureView() {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
+        
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
+        
+        likesContainer.backgroundColor = MPColors.gray
+        likesContainer.layer.cornerRadius = 10
+        
         likesLabel.textColor = .white
         likesLabel.font = UIFont.systemFont(ofSize: 14)
         likesLabel.textAlignment = .center
@@ -39,9 +43,9 @@ class PhotoCollectionViewCell: BaseCollectionViewCell {
             make.edges.equalToSuperview()
         }
         likesContainer.snp.makeConstraints { make in
-            make.left.bottom.equalToSuperview().inset(8)
+            make.leading.bottom.equalToSuperview().inset(8)
             make.height.equalTo(24)
-            make.width.equalTo(60)
+            make.width.equalTo(70)
         }
         likesLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(4)
