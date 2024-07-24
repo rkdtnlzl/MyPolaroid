@@ -32,6 +32,7 @@
 		0168FDA52C511FF000C17313 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDA42C511FF000C17313 /* Photo.swift */; };
 		0168FDA72C51202B00C17313 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDA62C51202B00C17313 /* UnsplashAPIManager.swift */; };
 		0168FDA92C51206B00C17313 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDA82C51206B00C17313 /* PhotoCollectionViewCell.swift */; };
+		0168FDAE2C515B6300C17313 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		0168FDA42C511FF000C17313 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0168FDA62C51202B00C17313 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
 		0168FDA82C51206B00C17313 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				01FF38682C4E2FF9004F5F3A /* BaseViewController.swift */,
 				0168FD362C4E5EAA00C17313 /* BaseView.swift */,
+				0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				0168FD152C4E3EC400C17313 /* String+.swift in Sources */,
 				01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */,
 				0168FDA92C51206B00C17313 /* PhotoCollectionViewCell.swift in Sources */,
+				0168FDAE2C515B6300C17313 /* BaseCollectionViewCell.swift in Sources */,
 				0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */,
 				0168FDA72C51202B00C17313 /* UnsplashAPIManager.swift in Sources */,
 				0168FD192C4E3F1900C17313 /* StringLiterals.swift in Sources */,
