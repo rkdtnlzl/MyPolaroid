@@ -10,7 +10,7 @@ import SnapKit
 import Kingfisher
 
 class PhotoCollectionViewCell: BaseCollectionViewCell {
-    static let id = "PhotoCollectionViewCell"
+    
     let imageView = UIImageView()
     let likesContainer = UIView()
     let likesLabel = UILabel()
