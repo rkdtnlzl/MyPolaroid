@@ -30,4 +30,26 @@ class UnsplashAPIManager {
             }
         }
     }
+    
+    func fetchSearchPhotos(query: String, page: Int, completion: @escaping ([SearchPhoto]?) -> Void) {
+        let urlString = "\(APIURL.searchPhotoURL)&query=\(query)&page=\(page)"
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        AF.request(url).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let photoResponse = try JSONDecoder().decode(SearchPhotoResponse.self, from: data)
+                    completion(photoResponse.results)
+                } catch {
+                    completion(nil)
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil)
+            }
+        }
+    }
 }
