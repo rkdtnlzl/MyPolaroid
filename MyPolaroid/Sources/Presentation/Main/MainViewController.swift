@@ -83,7 +83,7 @@ final class MainViewController: BaseViewController {
             let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
             collectionView.delegate = self
             collectionView.dataSource = self
-            collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.id)
+            collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
             contentView.addSubview(collectionView)
             collectionViews.append(collectionView)
             
@@ -127,7 +127,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.id, for: indexPath) as? PhotoCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else {
             return UICollectionViewCell()
         }
         if let index = collectionViews.firstIndex(of: collectionView) {
