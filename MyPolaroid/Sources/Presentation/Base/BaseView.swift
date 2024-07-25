@@ -14,11 +14,13 @@ class BaseView: UIView {
         configureHierarchy()
         configureConstraints()
         configureUI()
+        configureAddTarget()
     }
     
     func configureHierarchy() { }
     func configureConstraints() { }
     func configureUI() { }
+    func configureAddTarget() { }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
