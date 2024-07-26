@@ -192,4 +192,8 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             fetchPhotos(query: currentQuery, page: currentPage)
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
