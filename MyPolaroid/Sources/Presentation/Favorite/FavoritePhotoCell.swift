@@ -25,9 +25,7 @@ class FavoritePhotoCell: BaseCollectionViewCell {
     
     override func configureHierarchy() {
         contentView.addSubview(imageView)
-        contentView.addSubview(likesContainer)
         contentView.addSubview(favoriteButton)
-        likesContainer.addSubview(likesLabel)
     }
     
     override func configureView() {
@@ -38,14 +36,6 @@ class FavoritePhotoCell: BaseCollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
         
-        likesContainer.backgroundColor = .gray
-        likesContainer.layer.cornerRadius = 10
-        likesContainer.layer.masksToBounds = true
-        
-        likesLabel.textColor = .white
-        likesLabel.font = UIFont.systemFont(ofSize: 14)
-        likesLabel.textAlignment = .center
-        
         favoriteButton.setImage(UIImage(named: "like_circle_inactive"), for: .normal)
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
     }
@@ -53,14 +43,6 @@ class FavoritePhotoCell: BaseCollectionViewCell {
     override func configureLayout() {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-        }
-        likesContainer.snp.makeConstraints { make in
-            make.leading.bottom.equalToSuperview().inset(8)
-            make.height.equalTo(24)
-            make.width.equalTo(70)
-        }
-        likesLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(4)
         }
         favoriteButton.snp.makeConstraints { make in
             make.trailing.bottom.equalToSuperview().inset(8)
