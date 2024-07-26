@@ -22,6 +22,7 @@ final class FavoriteViewController: BaseViewController {
     }()
     private var favoritePhotos: Results<FavoritePhotoTable>?
     private let realmManager = RealmManager()
+    private let noDataLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +35,26 @@ final class FavoriteViewController: BaseViewController {
     }
     
     override func configureHierarchy() {
-        view.addSubviews(collectionView)
+        view.addSubviews(collectionView, noDataLabel)
     }
     
     override func configureUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        noDataLabel.text = "저장된 사진이 없어요."
+        noDataLabel.textAlignment = .center
+        noDataLabel.font = .boldSystemFont(ofSize: 18)
+        noDataLabel.textColor = .black
+        noDataLabel.isHidden = true
     }
     
     override func configureConstraints() {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        noDataLabel.snp.makeConstraints { make in
+            make.center.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -55,6 +65,7 @@ final class FavoriteViewController: BaseViewController {
     @objc private func loadFavoritePhotos() {
         favoritePhotos = realmManager.getAllFavoritePhotos()
         collectionView.reloadData()
+        noDataLabel.isHidden = !(favoritePhotos?.isEmpty ?? true)
     }
 }
 
