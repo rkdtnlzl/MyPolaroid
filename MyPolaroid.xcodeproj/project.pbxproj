@@ -208,11 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				0168FD6A2C4FC41700C17313 /* Observable.swift */,
-				0168FD182C4E3F1900C17313 /* StringLiterals.swift */,
-				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
-				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
-				0168FD222C4E442600C17313 /* UserDefaultsKey.swift */,
-				0168FDDE2C552AAC00C17313 /* OrderBy.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -230,6 +225,7 @@
 		0168FD712C5000F900C17313 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0168FDE02C55322F00C17313 /* Enum */,
 				0168FDCD2C52957D00C17313 /* Realm */,
 				0168FDAC2C512C3700C17313 /* Network */,
 				0168FD282C4E46C700C17313 /* Application */,
@@ -253,6 +249,9 @@
 			children = (
 				0168FDD12C52962900C17313 /* RealmManager.swift */,
 				0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */,
+				0168FD182C4E3F1900C17313 /* StringLiterals.swift */,
+				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
+				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -265,6 +264,15 @@
 				0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */,
 			);
 			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		0168FDE02C55322F00C17313 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				0168FD222C4E442600C17313 /* UserDefaultsKey.swift */,
+				0168FDDE2C552AAC00C17313 /* OrderBy.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		01FF38462C4E2EE4004F5F3A = {
