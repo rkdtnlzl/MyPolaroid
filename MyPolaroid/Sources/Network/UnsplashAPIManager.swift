@@ -31,8 +31,14 @@ class UnsplashAPIManager {
         }
     }
     
-    func fetchSearchPhotos(query: String, page: Int, completion: @escaping ([Photo]?) -> Void) {
-        let urlString = "\(APIURL.searchPhotoURL)&query=\(query)&page=\(page)"
+    func fetchSearchPhotos(query: String, page: Int, orderBy: OrderBy, completion: @escaping ([Photo]?) -> Void) {
+        let urlString: String
+        switch orderBy {
+        case .relevance:
+            urlString = "\(APIURL.searchPhotoRelevanceURL)&query=\(query)&page=\(page)"
+        case .latest:
+            urlString = "\(APIURL.searchPhotoLatestURL)&query=\(query)&page=\(page)"
+        }
         guard let url = URL(string: urlString) else {
             completion(nil)
             return
