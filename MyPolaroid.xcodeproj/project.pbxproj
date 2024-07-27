@@ -35,11 +35,12 @@
 		0168FDAE2C515B6300C17313 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */; };
 		0168FDC82C524A3900C17313 /* SearchPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */; };
 		0168FDCA2C524CAE00C17313 /* FilteredHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */; };
-		0168FDCC2C5269B100C17313 /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDCB2C5269B100C17313 /* SearchPhoto.swift */; };
 		0168FDD02C52961B00C17313 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0168FDCF2C52961B00C17313 /* RealmSwift */; };
 		0168FDD22C52962900C17313 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD12C52962900C17313 /* RealmManager.swift */; };
 		0168FDD42C52964E00C17313 /* FavoritePhotoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */; };
 		0168FDD62C529E3300C17313 /* FavoritePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */; };
+		0168FDD92C54D08A00C17313 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */; };
+		0168FDDB2C54E6F600C17313 /* PhotoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -75,10 +76,11 @@
 		0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoCell.swift; sourceTree = "<group>"; };
 		0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredHeaderView.swift; sourceTree = "<group>"; };
-		0168FDCB2C5269B100C17313 /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		0168FDD12C52962900C17313 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotoTable.swift; sourceTree = "<group>"; };
 		0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotoCell.swift; sourceTree = "<group>"; };
+		0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStatistics.swift; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +165,6 @@
 				0168FD302C4E507600C17313 /* SearchViewController.swift */,
 				0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */,
 				0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */,
-				0168FDCB2C5269B100C17313 /* SearchPhoto.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -191,6 +192,7 @@
 				0168FD1F2C4E3FF500C17313 /* Base */,
 				0168FD1E2C4E3FE300C17313 /* Onboarding */,
 				0168FD2B2C4E500600C17313 /* Main */,
+				0168FDD72C54D07400C17313 /* PhotoDetail */,
 				0168FD2C2C4E500D00C17313 /* Search */,
 				0168FD2D2C4E504B00C17313 /* Favorite */,
 				0168FD342C4E556500C17313 /* TabBar */,
@@ -248,6 +250,15 @@
 				0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		0168FDD72C54D07400C17313 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */,
+				0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */,
+			);
+			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
 		01FF38462C4E2EE4004F5F3A = {
@@ -372,7 +383,6 @@
 				0168FD2A2C4E4FBA00C17313 /* TabBarViewController.swift in Sources */,
 				0168FD152C4E3EC400C17313 /* String+.swift in Sources */,
 				01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */,
-				0168FDCC2C5269B100C17313 /* SearchPhoto.swift in Sources */,
 				0168FDA92C51206B00C17313 /* PhotoCollectionViewCell.swift in Sources */,
 				0168FDAE2C515B6300C17313 /* BaseCollectionViewCell.swift in Sources */,
 				0168FD6F2C4FDABA00C17313 /* UIView+.swift in Sources */,
@@ -385,7 +395,9 @@
 				0168FD172C4E3EF000C17313 /* NicknameValidationResult.swift in Sources */,
 				0168FDC82C524A3900C17313 /* SearchPhotoCell.swift in Sources */,
 				0168FD332C4E508B00C17313 /* FavoriteViewController.swift in Sources */,
+				0168FDDB2C54E6F600C17313 /* PhotoStatistics.swift in Sources */,
 				0168FD272C4E450A00C17313 /* UICollectionViewCell+.swift in Sources */,
+				0168FDD92C54D08A00C17313 /* PhotoDetailViewController.swift in Sources */,
 				0168FD1D2C4E3F8700C17313 /* UIColor+HexCode.swift in Sources */,
 				0168FDD22C52962900C17313 /* RealmManager.swift in Sources */,
 				0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */,
