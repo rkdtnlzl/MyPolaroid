@@ -16,7 +16,6 @@ class PhotoDetailViewController: BaseViewController {
     private let userProfileImageView = UIImageView()
     private let createAtLabel = UILabel()
     private let favoriteButton = UIButton()
-    private var isFavorited: Bool = false
     private let infoTitle = UILabel()
     private let sizeTitle = UILabel()
     private let sizeLabel = UILabel()
@@ -24,11 +23,29 @@ class PhotoDetailViewController: BaseViewController {
     private let viewsLabel = UILabel()
     private let downloadsTitle = UILabel()
     private let downloadsLabel = UILabel()
-    var photo: Photo? {
-        didSet {
-            configureData()
-            updateFavoriteButtonState()
-            fetchStatistics()
+    private let viewModel = PhotoDetailViewModel()
+    var photo: Photo?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindViewModel()
+        if let photo = photo {
+            viewModel.setPhoto(photo)
+        }
+    }
+    
+    private func bindViewModel() {
+        viewModel.inputPhoto.bind { [weak self] photo in
+            self?.configureData(with: photo)
+        }
+        viewModel.outputIsFavorite.bind { [weak self] isFavorited in
+            self?.updateFavoriteButtonState(isFavorited: isFavorited)
+        }
+        viewModel.outputViewsCount.bind { [weak self] views in
+            self?.viewsLabel.text = views
+        }
+        viewModel.outputDownloadsCount.bind { [weak self] downloads in
+            self?.downloadsLabel.text = downloads
         }
     }
     
@@ -81,17 +98,6 @@ class PhotoDetailViewController: BaseViewController {
     
     override func configureTarget() {
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc private func favoriteButtonTapped() {
-        guard let photo = photo else { return }
-        if isFavorited {
-            RealmManager().deleteFavoritePhoto(url: photo.urls.raw)
-        } else {
-            RealmManager().createFavoritePhoto(url: photo.urls.raw)
-        }
-        isFavorited.toggle()
-        updateFavoriteButtonState()
     }
     
     override func configureConstraints() {
@@ -148,35 +154,25 @@ class PhotoDetailViewController: BaseViewController {
         }
     }
     
-    private func configureData() {
-        if let photo = photo {
-            if let url = URL(string: photo.urls.raw) {
-                imageView.kf.setImage(with: url)
-            }
-            userNameLabel.text = photo.user.username
-            createAtLabel.text = photo.createdAt
-            sizeLabel.text = "\(photo.width) * \(photo.height)"
-            if let profileImageURL = URL(string: photo.user.profileImage.small) {
-                userProfileImageView.kf.setImage(with: profileImageURL)
-            }
-            isFavorited = RealmManager().isFavoritePhoto(url: photo.urls.raw)
-            updateFavoriteButtonState()
-        }
-    }
-    
-    private func fetchStatistics() {
+    private func configureData(with photo: Photo?) {
         guard let photo = photo else { return }
-        UnsplashAPIManager.shared.fetchPhotoStatistics(imageID: photo.id) { [weak self] statistics in
-            guard let self = self, let statistics = statistics else { return }
-            DispatchQueue.main.async {
-                self.viewsLabel.text = "\(statistics.views.total)"
-                self.downloadsLabel.text = "\(statistics.downloads.total)"
-            }
+        if let url = URL(string: photo.urls.raw) {
+            imageView.kf.setImage(with: url)
+        }
+        userNameLabel.text = photo.user.username
+        createAtLabel.text = photo.createdAt
+        sizeLabel.text = "\(photo.width) * \(photo.height)"
+        if let profileImageURL = URL(string: photo.user.profileImage.small) {
+            userProfileImageView.kf.setImage(with: profileImageURL)
         }
     }
     
-    private func updateFavoriteButtonState() {
+    private func updateFavoriteButtonState(isFavorited: Bool) {
         let imageName = isFavorited ? "like_circle" : "like_circle_inactive"
         favoriteButton.setImage(UIImage(named: imageName), for: .normal)
+    }
+    
+    @objc private func favoriteButtonTapped() {
+        viewModel.toggleFavorite()
     }
 }
