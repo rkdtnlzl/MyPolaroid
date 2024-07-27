@@ -26,7 +26,7 @@ class FilteredHeaderView: BaseView {
     }
     
     override func configureUI() {
-        sortedButton.setTitle("최신순", for: .normal)
+        sortedButton.setTitle("관련순", for: .normal)
         sortedButton.setImage(UIImage(named: "sort"), for: .normal)
         sortedButton.setTitleColor(.black, for: .normal)
         sortedButton.layer.cornerRadius = 10
