@@ -14,6 +14,7 @@ final class SearchViewController: BaseViewController {
     private var currentPage = 1
     private var isLoading = false
     private var currentQuery = ""
+    private var currentOrderBy: OrderBy = .relevance
     private let searchBar = UISearchBar()
     private let headerView = FilteredHeaderView()
     private let collectionView: UICollectionView = {
@@ -89,7 +90,7 @@ final class SearchViewController: BaseViewController {
     private func fetchPhotos(query: String, page: Int) {
         guard !isLoading else { return }
         isLoading = true
-        UnsplashAPIManager.shared.fetchSearchPhotos(query: query, page: page) { [weak self] photos in
+        UnsplashAPIManager.shared.fetchSearchPhotos(query: query, page: page, orderBy: currentOrderBy) { [weak self] photos in
             guard let self = self else { return }
             self.isLoading = false
             if let photos = photos {
@@ -134,15 +135,21 @@ final class SearchViewController: BaseViewController {
     
     private func presentSortOptions() {
         let alert = UIAlertController(title: nil, message: "정렬 방식을 선택하세요", preferredStyle: .actionSheet)
+        let relevanceAction = UIAlertAction(title: "관련순", style: .default) { [weak self] _ in
+            self?.headerView.sortedButton.setTitle("관련순", for: .normal)
+            self?.currentOrderBy = .relevance
+            self?.resetSearch()
+            self?.fetchPhotos(query: self?.currentQuery ?? "", page: self?.currentPage ?? 1)
+        }
         let latestAction = UIAlertAction(title: "최신순", style: .default) { [weak self] _ in
             self?.headerView.sortedButton.setTitle("최신순", for: .normal)
-        }
-        let accuracyAction = UIAlertAction(title: "정확도순", style: .default) { [weak self] _ in
-            self?.headerView.sortedButton.setTitle("정확도순", for: .normal)
+            self?.currentOrderBy = .latest
+            self?.resetSearch()
+            self?.fetchPhotos(query: self?.currentQuery ?? "", page: self?.currentPage ?? 1)
         }
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(relevanceAction)
         alert.addAction(latestAction)
-        alert.addAction(accuracyAction)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
