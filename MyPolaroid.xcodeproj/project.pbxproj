@@ -41,6 +41,8 @@
 		0168FDD62C529E3300C17313 /* FavoritePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */; };
 		0168FDD92C54D08A00C17313 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */; };
 		0168FDDB2C54E6F600C17313 /* PhotoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */; };
+		0168FDDD2C55162B00C17313 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDDC2C55162B00C17313 /* PhotoDetailViewModel.swift */; };
+		0168FDDF2C552AAC00C17313 /* OrderBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDDE2C552AAC00C17313 /* OrderBy.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -81,6 +83,8 @@
 		0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotoCell.swift; sourceTree = "<group>"; };
 		0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStatistics.swift; sourceTree = "<group>"; };
+		0168FDDC2C55162B00C17313 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
+		0168FDDE2C552AAC00C17313 /* OrderBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBy.swift; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
 				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
 				0168FD222C4E442600C17313 /* UserDefaultsKey.swift */,
+				0168FDDE2C552AAC00C17313 /* OrderBy.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				0168FDD82C54D08A00C17313 /* PhotoDetailViewController.swift */,
+				0168FDDC2C55162B00C17313 /* PhotoDetailViewModel.swift */,
 				0168FDDA2C54E6F600C17313 /* PhotoStatistics.swift */,
 			);
 			path = PhotoDetail;
@@ -375,6 +381,7 @@
 				0168FDD62C529E3300C17313 /* FavoritePhotoCell.swift in Sources */,
 				01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */,
 				01FF38692C4E2FF9004F5F3A /* BaseViewController.swift in Sources */,
+				0168FDDD2C55162B00C17313 /* PhotoDetailViewModel.swift in Sources */,
 				0168FD952C5106D400C17313 /* APIKey.swift in Sources */,
 				0168FD6D2C4FC6AB00C17313 /* NicknameSettingViewModel.swift in Sources */,
 				0168FDD42C52964E00C17313 /* FavoritePhotoTable.swift in Sources */,
@@ -405,6 +412,7 @@
 				0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */,
 				0168FD1B2C4E3F6A00C17313 /* MPColors.swift in Sources */,
 				0168FD232C4E442600C17313 /* UserDefaultsKey.swift in Sources */,
+				0168FDDF2C552AAC00C17313 /* OrderBy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
