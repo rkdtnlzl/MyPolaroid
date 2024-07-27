@@ -136,4 +136,16 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let index = collectionViews.firstIndex(of: collectionView) {
+            let selectedPhoto = photosData[index][indexPath.row]
+
+            let detailViewController = PhotoDetailViewController()
+
+            detailViewController.photo = selectedPhoto
+
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
 }
