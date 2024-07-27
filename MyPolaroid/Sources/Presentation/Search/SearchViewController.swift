@@ -10,7 +10,7 @@ import SnapKit
 import RealmSwift
 
 final class SearchViewController: BaseViewController {
-    private var photos: [SearchPhoto] = []
+    private var photos: [Photo] = []
     private var currentPage = 1
     private var isLoading = false
     private var currentQuery = ""
@@ -181,6 +181,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (collectionView.frame.width - 4) / 2
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = photos[indexPath.item]
+        let detailViewController = PhotoDetailViewController()
+        detailViewController.photo = photo
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
