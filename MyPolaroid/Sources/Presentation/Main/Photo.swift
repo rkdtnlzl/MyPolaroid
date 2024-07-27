@@ -37,15 +37,16 @@ struct URLS: Decodable {
 }
 
 struct User: Decodable {
-    let name: String
+    let username: String
     let profileImage: ProfileImage
     
     enum CodingKeys: String, CodingKey {
-        case name
+        case username
         case profileImage = "profile_image"
     }
 }
 
 struct ProfileImage: Decodable {
+    let small: String
     let medium: String
 }
