@@ -68,7 +68,7 @@ class SearchPhotoCell: BaseCollectionViewCell {
         }
     }
     
-    func configure(with photo: SearchPhoto) {
+    func configure(with photo: Photo) {
         if let url = URL(string: photo.urls.small) {
             imageView.kf.setImage(with: url)
             photoUrl = photo.urls.small
