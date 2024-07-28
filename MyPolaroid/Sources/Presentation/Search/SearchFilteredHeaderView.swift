@@ -1,5 +1,5 @@
 //
-//  FilteredHeaderView.swift
+//  SearchFilteredHeaderView.swift
 //  MyPolaroid
 //
 //  Created by 강석호 on 7/25/24.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class FilteredHeaderView: BaseView {
+class SearchFilteredHeaderView: BaseView {
     
     let redButton = UIButton()
     let purpleButton = UIButton()
