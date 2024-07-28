@@ -34,7 +34,7 @@
 		0168FDA92C51206B00C17313 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDA82C51206B00C17313 /* PhotoCollectionViewCell.swift */; };
 		0168FDAE2C515B6300C17313 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */; };
 		0168FDC82C524A3900C17313 /* SearchPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */; };
-		0168FDCA2C524CAE00C17313 /* FilteredHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */; };
+		0168FDCA2C524CAE00C17313 /* SearchFilteredHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDC92C524CAE00C17313 /* SearchFilteredHeaderView.swift */; };
 		0168FDD22C52962900C17313 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD12C52962900C17313 /* RealmManager.swift */; };
 		0168FDD42C52964E00C17313 /* FavoritePhotoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */; };
 		0168FDD62C529E3300C17313 /* FavoritePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */; };
@@ -46,6 +46,7 @@
 		0168FDE42C56247A00C17313 /* ProfileImageModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE32C56247A00C17313 /* ProfileImageModifyViewController.swift */; };
 		0168FDE72C56406000C17313 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0168FDE62C56406000C17313 /* RealmSwift */; };
 		0168FDE92C56533E00C17313 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE82C56533E00C17313 /* UIViewController+.swift */; };
+		0168FDEB2C56810500C17313 /* FavoriteFilteredHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDEA2C56810500C17313 /* FavoriteFilteredHeaderView.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -80,7 +81,7 @@
 		0168FDA82C51206B00C17313 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0168FDAD2C515B6300C17313 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoCell.swift; sourceTree = "<group>"; };
-		0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredHeaderView.swift; sourceTree = "<group>"; };
+		0168FDC92C524CAE00C17313 /* SearchFilteredHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilteredHeaderView.swift; sourceTree = "<group>"; };
 		0168FDD12C52962900C17313 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotoTable.swift; sourceTree = "<group>"; };
 		0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotoCell.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		0168FDE12C5619F500C17313 /* ProfileNicknameModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNicknameModifyViewController.swift; sourceTree = "<group>"; };
 		0168FDE32C56247A00C17313 /* ProfileImageModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageModifyViewController.swift; sourceTree = "<group>"; };
 		0168FDE82C56533E00C17313 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		0168FDEA2C56810500C17313 /* FavoriteFilteredHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilteredHeaderView.swift; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0168FD302C4E507600C17313 /* SearchViewController.swift */,
-				0168FDC92C524CAE00C17313 /* FilteredHeaderView.swift */,
+				0168FDC92C524CAE00C17313 /* SearchFilteredHeaderView.swift */,
 				0168FDC72C524A3900C17313 /* SearchPhotoCell.swift */,
 			);
 			path = Search;
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0168FD322C4E508B00C17313 /* FavoriteViewController.swift */,
+				0168FDEA2C56810500C17313 /* FavoriteFilteredHeaderView.swift */,
 				0168FDD52C529E3300C17313 /* FavoritePhotoCell.swift */,
 			);
 			path = Favorite;
@@ -258,9 +261,6 @@
 			children = (
 				0168FDD12C52962900C17313 /* RealmManager.swift */,
 				0168FDD32C52964E00C17313 /* FavoritePhotoTable.swift */,
-				0168FD182C4E3F1900C17313 /* StringLiterals.swift */,
-				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
-				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -280,6 +280,9 @@
 			children = (
 				0168FD222C4E442600C17313 /* UserDefaultsKey.swift */,
 				0168FDDE2C552AAC00C17313 /* OrderBy.swift */,
+				0168FD182C4E3F1900C17313 /* StringLiterals.swift */,
+				0168FD1A2C4E3F6A00C17313 /* MPColors.swift */,
+				0168FD162C4E3EF000C17313 /* NicknameValidationResult.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				0168FDD62C529E3300C17313 /* FavoritePhotoCell.swift in Sources */,
 				01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */,
 				01FF38692C4E2FF9004F5F3A /* BaseViewController.swift in Sources */,
+				0168FDEB2C56810500C17313 /* FavoriteFilteredHeaderView.swift in Sources */,
 				0168FDDD2C55162B00C17313 /* PhotoDetailViewModel.swift in Sources */,
 				0168FD952C5106D400C17313 /* APIKey.swift in Sources */,
 				0168FD6D2C4FC6AB00C17313 /* NicknameSettingViewModel.swift in Sources */,
@@ -427,7 +431,7 @@
 				0168FD1D2C4E3F8700C17313 /* UIColor+HexCode.swift in Sources */,
 				0168FDD22C52962900C17313 /* RealmManager.swift in Sources */,
 				0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */,
-				0168FDCA2C524CAE00C17313 /* FilteredHeaderView.swift in Sources */,
+				0168FDCA2C524CAE00C17313 /* SearchFilteredHeaderView.swift in Sources */,
 				0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */,
 				0168FDE92C56533E00C17313 /* UIViewController+.swift in Sources */,
 				0168FD1B2C4E3F6A00C17313 /* MPColors.swift in Sources */,
