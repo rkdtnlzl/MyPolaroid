@@ -104,6 +104,5 @@ extension ProfileImageModifyViewController: UICollectionViewDelegate, UICollecti
         UserDefaults.standard.set(indexPath.item, forKey: "\(UserDefaultsKey.profileNumberKey)")
         onSelectImage?(indexPath.item)
         collectionView.reloadData()
-//        navigationController?.popViewController(animated: true)
     }
 }
