@@ -16,7 +16,7 @@ final class SearchViewController: BaseViewController {
     private var currentQuery = ""
     private var currentOrderBy: OrderBy = .relevance
     private let searchBar = UISearchBar()
-    private let headerView = FilteredHeaderView()
+    private let headerView = SearchFilteredHeaderView()
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 4
@@ -153,6 +153,10 @@ final class SearchViewController: BaseViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -205,9 +209,5 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             currentPage += 1
             fetchPhotos(query: currentQuery, page: currentPage)
         }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
