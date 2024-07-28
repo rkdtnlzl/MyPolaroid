@@ -45,6 +45,7 @@
 		0168FDE22C5619F500C17313 /* ProfileNicknameModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE12C5619F500C17313 /* ProfileNicknameModifyViewController.swift */; };
 		0168FDE42C56247A00C17313 /* ProfileImageModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE32C56247A00C17313 /* ProfileImageModifyViewController.swift */; };
 		0168FDE72C56406000C17313 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0168FDE62C56406000C17313 /* RealmSwift */; };
+		0168FDE92C56533E00C17313 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE82C56533E00C17313 /* UIViewController+.swift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		0168FDDE2C552AAC00C17313 /* OrderBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBy.swift; sourceTree = "<group>"; };
 		0168FDE12C5619F500C17313 /* ProfileNicknameModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNicknameModifyViewController.swift; sourceTree = "<group>"; };
 		0168FDE32C56247A00C17313 /* ProfileImageModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageModifyViewController.swift; sourceTree = "<group>"; };
+		0168FDE82C56533E00C17313 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolaroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0168FD1C2C4E3F8700C17313 /* UIColor+HexCode.swift */,
 				0168FD262C4E450A00C17313 /* UICollectionViewCell+.swift */,
 				0168FD6E2C4FDABA00C17313 /* UIView+.swift */,
+				0168FDE82C56533E00C17313 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				0168FD6B2C4FC41700C17313 /* Observable.swift in Sources */,
 				0168FDCA2C524CAE00C17313 /* FilteredHeaderView.swift in Sources */,
 				0168FD372C4E5EAA00C17313 /* BaseView.swift in Sources */,
+				0168FDE92C56533E00C17313 /* UIViewController+.swift in Sources */,
 				0168FD1B2C4E3F6A00C17313 /* MPColors.swift in Sources */,
 				0168FD232C4E442600C17313 /* UserDefaultsKey.swift in Sources */,
 				0168FDDF2C552AAC00C17313 /* OrderBy.swift in Sources */,
