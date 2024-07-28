@@ -17,7 +17,7 @@ final class ProfileNicknameModifyViewController: BaseViewController {
     private let nicknameStatusLabel = UILabel()
     private let mbtiLabel = UILabel()
     private let mbtiView = MBTIView()
-    
+    private let withdrawButton = UIButton()
     private let viewModel = NicknameSettingViewModel()
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ final class ProfileNicknameModifyViewController: BaseViewController {
     }
     
     override func configureHierarchy() {
-        view.addSubviews(profileImageView, profileImageButton, nicknameTextField, nicknameTextFieldLine, nicknameStatusLabel, mbtiLabel, mbtiView)
+        view.addSubviews(profileImageView, profileImageButton, nicknameTextField, nicknameTextFieldLine, nicknameStatusLabel, mbtiLabel, mbtiView, withdrawButton)
     }
     
     override func configureUI() {
@@ -64,6 +64,9 @@ final class ProfileNicknameModifyViewController: BaseViewController {
         mbtiLabel.text = StringLiterals.LabelText.MBTITitle
         mbtiLabel.textColor = .black
         mbtiLabel.font = .boldSystemFont(ofSize: 17)
+        
+        withdrawButton.setTitle("탈퇴하기", for: .normal)
+        withdrawButton.setTitleColor(MPColors.blue, for: .normal)
     }
     
     override func configureConstraints() {
@@ -100,6 +103,10 @@ final class ProfileNicknameModifyViewController: BaseViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.height.equalTo(120)
         }
+        withdrawButton.snp.makeConstraints { make in
+            make.top.equalTo(mbtiView.snp.bottom).offset(20)
+            make.centerX.equalTo(view.safeAreaLayoutGuide)
+        }
     }
     
     override func configureTarget() {
@@ -109,6 +116,7 @@ final class ProfileNicknameModifyViewController: BaseViewController {
             let selectedMBTI = self?.mbtiView.getSelectedMBTI() ?? []
             self?.viewModel.inputMBTISelection.value = selectedMBTI
         }
+        withdrawButton.addTarget(self, action: #selector(withdrawButtonClicked), for: .touchUpInside)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -121,7 +129,7 @@ final class ProfileNicknameModifyViewController: BaseViewController {
         profileImageView.image = UIImage(named: profileImageName)
         if let nickname = UserDefaults.standard.string(forKey: UserDefaultsKey.nicknameKey) {
             nicknameTextField.text = nickname
-            viewModel.inputNickname.value = nickname // 초기 닉네임 값을 뷰 모델에 설정
+            viewModel.inputNickname.value = nickname
         }
         if let savedMBTI = UserDefaults.standard.array(forKey: UserDefaultsKey.mbtiKey) as? [String] {
             viewModel.inputMBTISelection.value = savedMBTI
@@ -162,5 +170,24 @@ final class ProfileNicknameModifyViewController: BaseViewController {
             self?.profileImageView.image = UIImage(named: "profile_\(selectedIndex)")
         }
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func withdrawButtonClicked() {
+        showAlertToReset()
+    }
+    
+    private func showAlertToReset() {
+        showAlert(title: StringLiterals.AlertLabel.alertTitle,
+                  message: StringLiterals.AlertLabel.alertMessage,
+                  ok: "확인") { _ in
+            if let appDomain = Bundle.main.bundleIdentifier {
+                UserDefaults.standard.removePersistentDomain(forName: appDomain)
+            }
+            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+            let sceneDelegate = windowScene?.delegate as? SceneDelegate
+            let rootVC = UINavigationController(rootViewController: OnboardingViewController())
+            sceneDelegate?.window?.rootViewController = rootVC
+            sceneDelegate?.window?.makeKeyAndVisible()
+        }
     }
 }
