@@ -28,6 +28,31 @@ final class MainViewController: BaseViewController {
         fetchData()
     }
     
+    override func configureNavigation() {
+        let profileNumber = UserDefaults.standard.string(forKey: UserDefaultsKey.profileNumberKey) ?? "0"
+        let profileImageName = "profile_\(profileNumber)"
+        let profileImage = UIImage(named: profileImageName)
+        let profileImageView = UIImageView(image: profileImage)
+        let profileSize: CGFloat = 32
+        profileImageView.frame = CGRect(x: 0, y: 0, width: profileSize, height: profileSize)
+        profileImageView.layer.cornerRadius = profileSize / 2
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = MPColors.blue.cgColor
+        profileImageView.clipsToBounds = true
+        profileImageView.contentMode = .scaleAspectFit
+        let profileButton = UIButton(type: .custom)
+        profileButton.frame = profileImageView.frame
+        profileButton.addSubview(profileImageView)
+        profileButton.addTarget(self, action: #selector(profileButtonTapped), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: profileButton)
+    }
+    
+    @objc private func profileButtonTapped() {
+        let vc = ProfileNicknameModifyViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func configureHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
@@ -62,7 +87,7 @@ final class MainViewController: BaseViewController {
             sectionLabel.text = sectionTitles[i]
             sectionLabel.font = UIFont.boldSystemFont(ofSize: 20)
             contentView.addSubview(sectionLabel)
-
+            
             let topAnchor: ConstraintItem
             if i == 0 {
                 topAnchor = titleLabel.snp.bottom
@@ -98,7 +123,7 @@ final class MainViewController: BaseViewController {
             }
         }
     }
-
+    
     
     private func fetchData() {
         for (index, urlString) in apiURLs.enumerated() {
@@ -140,11 +165,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let index = collectionViews.firstIndex(of: collectionView) {
             let selectedPhoto = photosData[index][indexPath.row]
-
             let detailViewController = PhotoDetailViewController()
-
             detailViewController.photo = selectedPhoto
-
             navigationController?.pushViewController(detailViewController, animated: true)
         }
     }
