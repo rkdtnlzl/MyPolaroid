@@ -66,14 +66,19 @@ class MBTIView: BaseView {
     
     @objc private func buttonTapped(_ sender: UIButton) {
         let group = sender.tag % 4
-        for tag in stride(from: group, to: 8, by: 4) {
-            if let selectedButton = selectedButtons[tag] {
-                selectedButton.backgroundColor = MPColors.gray
-                selectedButtons.removeValue(forKey: tag)
+        if let selectedButton = selectedButtons[sender.tag], selectedButton == sender {
+            selectedButton.backgroundColor = MPColors.gray
+            selectedButtons.removeValue(forKey: sender.tag)
+        } else {
+            for tag in stride(from: group, to: 8, by: 4) {
+                if let selectedButton = selectedButtons[tag] {
+                    selectedButton.backgroundColor = MPColors.gray
+                    selectedButtons.removeValue(forKey: tag)
+                }
             }
+            selectedButtons[sender.tag] = sender
+            sender.backgroundColor = MPColors.blue
         }
-        selectedButtons[sender.tag] = sender
-        sender.backgroundColor = MPColors.blue
         selectionChanged?()
     }
     
@@ -85,4 +90,31 @@ class MBTIView: BaseView {
         let sortedKeys = selectedButtons.keys.sorted()
         return sortedKeys.compactMap { selectedButtons[$0]?.title(for: .normal) }
     }
+    
+    func setSelectedMBTI(_ mbti: [String]) {
+        clearSelection()
+        for (_, letter) in mbti.enumerated() {
+            let rowIndex = (letter == "E" || letter == "S" || letter == "T" || letter == "J") ? 0 : 1
+            let titles = rowIndex == 0 ? topRowTitles : bottomRowTitles
+            if let buttonIndex = titles.firstIndex(of: letter) {
+                let buttonTag = rowIndex * 4 + buttonIndex
+                if let button = getButtonWithTag(buttonTag) {
+                    buttonTapped(button)
+                }
+            }
+        }
+    }
+    
+    private func getButtonWithTag(_ tag: Int) -> UIButton? {
+        let allButtons = topRowStackView.arrangedSubviews + bottomRowStackView.arrangedSubviews
+        return allButtons.compactMap { $0 as? UIButton }.first(where: { $0.tag == tag })
+    }
+    
+    private func clearSelection() {
+        for (_, button) in selectedButtons {
+            button.backgroundColor = MPColors.gray
+        }
+        selectedButtons.removeAll()
+    }
 }
+
