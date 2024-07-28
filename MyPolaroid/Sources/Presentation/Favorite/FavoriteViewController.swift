@@ -20,9 +20,11 @@ final class FavoriteViewController: BaseViewController {
         collectionView.register(FavoritePhotoCell.self, forCellWithReuseIdentifier: FavoritePhotoCell.identifier)
         return collectionView
     }()
+    private let headerView = FavoriteFilteredHeaderView()
     private var favoritePhotos: Results<FavoritePhotoTable>?
     private let realmManager = RealmManager()
     private let noDataLabel = UILabel()
+    private var isSortedByLatest = true // 최신순 정렬 여부를 나타내는 변수
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ final class FavoriteViewController: BaseViewController {
     }
     
     override func configureHierarchy() {
-        view.addSubviews(collectionView, noDataLabel)
+        view.addSubviews(headerView, collectionView, noDataLabel)
     }
     
     override func configureUI() {
@@ -47,11 +49,21 @@ final class FavoriteViewController: BaseViewController {
         noDataLabel.font = .boldSystemFont(ofSize: 18)
         noDataLabel.textColor = .black
         noDataLabel.isHidden = true
+
+        headerView.onSortButtonTapped = { [weak self] in
+            self?.sortFavoritePhotos()
+        }
     }
     
     override func configureConstraints() {
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(44)
+        }
         collectionView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(headerView.snp.bottom)
+            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         noDataLabel.snp.makeConstraints { make in
             make.center.equalTo(view.safeAreaLayoutGuide)
@@ -64,8 +76,36 @@ final class FavoriteViewController: BaseViewController {
     
     @objc private func loadFavoritePhotos() {
         favoritePhotos = realmManager.getAllFavoritePhotos()
+        sortAndReloadData()
+    }
+    
+    private func sortAndReloadData() {
+        if isSortedByLatest {
+            favoritePhotos = favoritePhotos?.sorted(byKeyPath: "createdAt", ascending: false)
+            headerView.sortedButton.setTitle("최신순", for: .normal)
+        } else {
+            favoritePhotos = favoritePhotos?.sorted(byKeyPath: "createdAt", ascending: true)
+            headerView.sortedButton.setTitle("과거순", for: .normal)
+        }
         collectionView.reloadData()
         noDataLabel.isHidden = !(favoritePhotos?.isEmpty ?? true)
+    }
+    
+    private func sortFavoritePhotos() {
+        let alert = UIAlertController(title: nil, message: "정렬 방식을 선택하세요", preferredStyle: .actionSheet)
+        let latestAction = UIAlertAction(title: "최신순", style: .default) { [weak self] _ in
+            self?.isSortedByLatest = true
+            self?.sortAndReloadData()
+        }
+        let oldestAction = UIAlertAction(title: "과거순", style: .default) { [weak self] _ in
+            self?.isSortedByLatest = false
+            self?.sortAndReloadData()
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(latestAction)
+        alert.addAction(oldestAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
