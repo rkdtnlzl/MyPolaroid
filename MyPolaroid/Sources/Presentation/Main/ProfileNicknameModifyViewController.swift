@@ -104,7 +104,7 @@ final class ProfileNicknameModifyViewController: BaseViewController {
             make.height.equalTo(120)
         }
         withdrawButton.snp.makeConstraints { make in
-            make.top.equalTo(mbtiView.snp.bottom).offset(20)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
             make.centerX.equalTo(view.safeAreaLayoutGuide)
         }
     }
