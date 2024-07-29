@@ -160,7 +160,15 @@ class PhotoDetailViewController: BaseViewController {
             imageView.kf.setImage(with: url)
         }
         userNameLabel.text = photo.user.username
-        createAtLabel.text = photo.createdAt
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let date = inputDateFormatter.date(from: photo.createdAt) {
+            let outputDateFormatter = DateFormatter()
+            outputDateFormatter.dateFormat = "yyyy년 M월 d일 '게시됨'"
+            createAtLabel.text = outputDateFormatter.string(from: date)
+        } else {
+            createAtLabel.text = ""
+        }
         sizeLabel.text = "\(photo.width) * \(photo.height)"
         if let profileImageURL = URL(string: photo.user.profileImage.small) {
             userProfileImageView.kf.setImage(with: profileImageURL)
