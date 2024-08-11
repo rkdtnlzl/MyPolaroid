@@ -36,4 +36,12 @@ final class RealmManager {
     func getAllFavoritePhotos() -> Results<FavoritePhotoTable> {
         return realm.objects(FavoritePhotoTable.self)
     }
+    
+    func deleteAllFavoritePhotos() {
+        let allPhotos = realm.objects(FavoritePhotoTable.self)
+        try! realm.write {
+            realm.delete(allPhotos)
+        }
+        NotificationCenter.default.post(name: RealmManager.favoriteChangedNotification, object: nil)
+    }
 }

@@ -47,6 +47,8 @@
 		0168FDE72C56406000C17313 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0168FDE62C56406000C17313 /* RealmSwift */; };
 		0168FDE92C56533E00C17313 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDE82C56533E00C17313 /* UIViewController+.swift */; };
 		0168FDEB2C56810500C17313 /* FavoriteFilteredHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0168FDEA2C56810500C17313 /* FavoriteFilteredHeaderView.swift */; };
+		01E4084D2C61127B0006B86F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 01E4084C2C61127B0006B86F /* RxCocoa */; };
+		01E4084F2C61127B0006B86F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 01E4084E2C61127B0006B86F /* RxSwift */; };
 		01FF38532C4E2EE4004F5F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38522C4E2EE4004F5F3A /* AppDelegate.swift */; };
 		01FF38552C4E2EE4004F5F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF38542C4E2EE4004F5F3A /* SceneDelegate.swift */; };
 		01FF385C2C4E2EE6004F5F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FF385B2C4E2EE6004F5F3A /* Assets.xcassets */; };
@@ -109,8 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E4084F2C61127B0006B86F /* RxSwift in Frameworks */,
 				0168FDE72C56406000C17313 /* RealmSwift in Frameworks */,
 				0168FD9F2C510D3000C17313 /* Kingfisher in Frameworks */,
+				01E4084D2C61127B0006B86F /* RxCocoa in Frameworks */,
 				0168FD112C4E38FB00C17313 /* SnapKit in Frameworks */,
 				0168FD9C2C510D2700C17313 /* Alamofire in Frameworks */,
 			);
@@ -335,6 +339,8 @@
 				0168FD9B2C510D2700C17313 /* Alamofire */,
 				0168FD9E2C510D3000C17313 /* Kingfisher */,
 				0168FDE62C56406000C17313 /* RealmSwift */,
+				01E4084C2C61127B0006B86F /* RxCocoa */,
+				01E4084E2C61127B0006B86F /* RxSwift */,
 			);
 			productName = MyPolaroid;
 			productReference = 01FF384F2C4E2EE4004F5F3A /* MyPolaroid.app */;
@@ -369,6 +375,7 @@
 				0168FD9A2C510D2700C17313 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				0168FD9D2C510D3000C17313 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				0168FDE52C56406000C17313 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				01E4084B2C61127B0006B86F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 01FF38502C4E2EE4004F5F3A /* Products */;
 			projectDirPath = "";
@@ -695,6 +702,14 @@
 				version = 10.49.0;
 			};
 		};
+		01E4084B2C61127B0006B86F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -717,6 +732,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0168FDE52C56406000C17313 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		01E4084C2C61127B0006B86F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01E4084B2C61127B0006B86F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		01E4084E2C61127B0006B86F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01E4084B2C61127B0006B86F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

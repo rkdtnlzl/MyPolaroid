@@ -180,6 +180,8 @@ final class ProfileNicknameModifyViewController: BaseViewController {
         showAlert(title: StringLiterals.AlertLabel.alertTitle,
                   message: StringLiterals.AlertLabel.alertMessage,
                   ok: "확인") { _ in
+            let realmManager = RealmManager()
+            realmManager.deleteAllFavoritePhotos()
             if let appDomain = Bundle.main.bundleIdentifier {
                 UserDefaults.standard.removePersistentDomain(forName: appDomain)
             }
